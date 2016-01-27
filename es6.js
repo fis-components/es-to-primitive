@@ -8,7 +8,7 @@ var isDate = require('is-date-object');
 var isSymbol = require('is-symbol');
 
 var ordinaryToPrimitive = function OrdinaryToPrimitive(O, hint) {
-	if (O == null) {
+	if (typeof O === 'undefined' || O === null) {
 		throw new TypeError('Cannot call method on ' + O);
 	}
 	if (typeof hint !== 'string' || (hint !== 'number' && hint !== 'string')) {
@@ -46,6 +46,7 @@ module.exports = function ToPrimitive(input, PreferredType) {
 	if (hasSymbols) {
 		if (Symbol.toPrimitive) {
 			throw new TypeError('Symbol.toPrimitive not supported yet');
+
 			// exoticToPrim = this.GetMethod(input, Symbol.toPrimitive);
 		} else if (isSymbol(input)) {
 			exoticToPrim = Symbol.prototype.valueOf;
