@@ -1,0 +1,14 @@
+{
+    "name": "es-to-primitive",
+    "description": "ECMAScript “ToPrimitive” algorithm. Provides ES5 and ES6 versions.",
+    "repos": "https://github.com/ljharb/es-to-primitive.git",
+    "main": "index.js",
+    "tag": "master",
+    "reposType": "npm",
+    "dependencies": {
+        "is-callable": "^1.0.4",
+        "is-date-object": "^1.0.0",
+        "is-symbol": "^1.0.1"
+    },
+    "version": "1.0.0"
+}
